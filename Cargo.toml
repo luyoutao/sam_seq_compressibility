@@ -1,0 +1,15 @@
+[package]
+name = "sam_seq_compressibility"
+version = "0.2.1"
+authors = ["Youtao Lu <luyoutao@sas.upenn.edu>"]
+edition = "2018"
+license = "MIT/Apache-2.0"
+description = "Calculates sequence compressibility per read (pair) from SAM or BAM"
+
+[dependencies]
+getopts = "0.2"
+regex = "1.3"
+log = { version = "0.4", features = ["max_level_debug", "release_max_level_info"] }
+env_logger = "0.7"
+chrono = "0.4"
+flate2 = "1.0"
