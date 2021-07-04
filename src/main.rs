@@ -1,3 +1,10 @@
+#' This Source Code Form is subject to the terms of the Mozilla Public
+#' License, v. 2.0. If a copy of the MPL was not distributed with this
+#' file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#'
+#' Youtao Lu@Kim Lab, 2016-2020
+#' Kim Laboratory Bioinformatics Infrastructure
+
 use chrono::Local;
 use env_logger::{self, Builder};
 use flate2::read::GzEncoder;
@@ -13,7 +20,7 @@ use std::process::exit;
 use std::process::{Command, Stdio};
 use std::str::from_utf8;
 
-static VERSION: &str = "0.2.1";
+static VERSION: &str = "0.2.2";
 
 #[derive(Debug)]
 enum EndType {
@@ -534,7 +541,7 @@ Summary:
     Computes gzip compressibility for each read (read pair if paired-end [PE]). The compressibility is defined as the original string length divided by the compressed length, and the higher compressibility the lower complexity. 
 
 Usage:
-    {} --inFile input.bam --outfile output.tsv [--nameSorted] [--ncores 1] [--endType PE] [--include_softclipped] [--version|-v]
+    {} --inFile input.bam --outFile output.tsv [--nameSorted] [--ncores 1] [--endType PE] [--include_softclipped] [--version|-v]
 
 Output:
     The output has 7 columns:
@@ -551,7 +558,6 @@ arg0);
 
 fn proc_args(args: &Vec<String>, mut opts: Options) -> Params {
     opts.optopt("i", "inFile", "", "input file, can be SAM or BAM format");
-    opts.optopt("l", "labels", "", "labels of input files, comma separated");
     opts.optopt(
         "o",
         "outFile",
