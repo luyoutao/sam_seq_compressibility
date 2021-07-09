@@ -3,7 +3,7 @@ name = "sam_seq_compressibility"
 version = "0.2.1"
 authors = ["Youtao Lu <luyoutao@sas.upenn.edu>"]
 edition = "2018"
-license = "MIT/Apache-2.0"
+license = "MPL-2.0 License"
 description = "Calculates sequence compressibility per read (pair) from SAM or BAM"
 
 [dependencies]
